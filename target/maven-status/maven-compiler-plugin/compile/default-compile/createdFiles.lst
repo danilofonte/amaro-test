@@ -1,0 +1,16 @@
+com/example/mystore/MyStoreApplication.class
+com/example/mystore/service/ProductService.class
+com/example/mystore/controller/IndexController.class
+com/example/mystore/dto/ProductStorefrontDto.class
+com/example/mystore/dto/AbstractDto.class
+com/example/mystore/controller/ProductPageControllerController.class
+com/example/mystore/stereotypes/ConverterComponent.class
+com/example/mystore/model/Product.class
+com/example/mystore/config/SwaggerConfig.class
+com/example/mystore/controller/ProductController.class
+com/example/mystore/repository/ProductRepository.class
+com/example/mystore/dto/ProductRestDto.class
+com/example/mystore/response/Response.class
+command/SearchCommand.class
+com/example/mystore/service/impl/DefaultProductService.class
+com/example/mystore/converter/ProductConverter.class

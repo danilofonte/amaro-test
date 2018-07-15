@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/danilofonte/mystore.svg?branch=master)](https://travis-ci.org/danilofonte/mystore)
+[![Build Status](https://travis-ci.org/danilofonte/MyStore.svg?branch=master)](https://travis-ci.org/danilofonte/MyStore)
 
 # My Store
 My Store Spring Boot
