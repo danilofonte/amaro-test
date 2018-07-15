@@ -29,7 +29,7 @@ public class ProductControllerTest {
 	private ProductService productService;
 
 	private static final String FIND_PRODUC_BY_ID = "/api/product/by-id/";
-	private static final int ID = 1;
+	private static final Long ID = Long.valueOf(1);
 	private static final String PRODUCT_NAME = "sapato";
 
 	@Test
