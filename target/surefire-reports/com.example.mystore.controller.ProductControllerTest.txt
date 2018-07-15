@@ -1,0 +1,12 @@
+-------------------------------------------------------------------------------
+Test set: com.example.mystore.controller.ProductControllerTest
+-------------------------------------------------------------------------------
+Tests run: 2, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.016 sec <<< FAILURE! - in com.example.mystore.controller.ProductControllerTest
+testFindProductById(com.example.mystore.controller.ProductControllerTest)  Time elapsed: 0.013 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.example.mystore.controller.ProductControllerTest.testFindProductById(ProductControllerTest.java:38)
+
+testFindProductWithId(com.example.mystore.controller.ProductControllerTest)  Time elapsed: 0 sec  <<< ERROR!
+java.lang.NullPointerException: null
+	at com.example.mystore.controller.ProductControllerTest.testFindProductWithId(ProductControllerTest.java:48)
+

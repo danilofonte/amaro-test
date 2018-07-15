@@ -17,7 +17,7 @@ public class ProductConverter {
 	public ProductRestDto convertProductToProductRestDto(final Product product) {
 		ProductRestDto productRestDto = new ProductRestDto();
 		productRestDto.setId(product.getId());
-		productRestDto.setName(product.getName());
+		productRestDto.setName(product.getP_VENUE());
 
 		return productRestDto;
 	}
@@ -30,9 +30,9 @@ public class ProductConverter {
 	 */
 	public ProductStorefrontDto convertProductToProductStorefrontDto(final Product product) {
 		ProductStorefrontDto productStorefrontDto = new ProductStorefrontDto();
-		productStorefrontDto.setBaseBaseProduct(product.getBaseProduct().getId());
-		productStorefrontDto.setDate(product.getDate());
-		productStorefrontDto.setVenue(product.getName());
+		productStorefrontDto.setBaseBaseProduct(product.getP_BASEPRODUCT());
+		productStorefrontDto.setDate(product.getP_DATE());
+		productStorefrontDto.setVenue(product.getP_VENUE());
 
 		return productStorefrontDto;
 	}

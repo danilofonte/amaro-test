@@ -20,7 +20,7 @@ public class DefaultProductService implements ProductService {
 
 	@Override
 	@Cacheable("productById")
-	public Optional<Product> findById(Long id) {
+	public Optional<Product> findById(long id) {
 		return Optional.ofNullable(this.productRepository.findOne(id));
 
 	}

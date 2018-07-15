@@ -5,7 +5,7 @@ import java.util.Date;
 public class ProductStorefrontDto extends AbstractDto {
 	
 	private String venue;
-	private Long baseBaseProduct;
+	private long baseBaseProduct;
 	private Date date;
 	
 	public String getVenue() {
@@ -14,10 +14,10 @@ public class ProductStorefrontDto extends AbstractDto {
 	public void setVenue(String venue) {
 		this.venue = venue;
 	}
-	public Long getBaseBaseProduct() {
+	public long getBaseBaseProduct() {
 		return baseBaseProduct;
 	}
-	public void setBaseBaseProduct(Long baseBaseProduct) {
+	public void setBaseBaseProduct(long baseBaseProduct) {
 		this.baseBaseProduct = baseBaseProduct;
 	}
 	public Date getDate() {

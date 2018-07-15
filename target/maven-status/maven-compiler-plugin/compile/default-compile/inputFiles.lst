@@ -1,5 +1,4 @@
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/dto/ProductRestDto.java
-/home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/security/util/JwtTokenUtil.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/MyStoreApplication.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/controller/ProductController.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/config/SwaggerConfig.java

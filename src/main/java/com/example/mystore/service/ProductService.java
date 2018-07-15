@@ -15,7 +15,7 @@ public interface ProductService {
 	 * @param id
 	 * @return
 	 */
-	Optional<Product> findById(final Long id);
+	Optional<Product> findById(final long id);
 
 	/**
 	 * List products

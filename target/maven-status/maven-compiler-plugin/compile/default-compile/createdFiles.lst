@@ -2,7 +2,6 @@ com/example/mystore/MyStoreApplication.class
 com/example/mystore/service/ProductService.class
 com/example/mystore/config/SwaggerConfig.class
 com/example/mystore/controller/ProductController.class
-com/example/mystore/security/util/JwtTokenUtil.class
 com/example/mystore/dto/ProductStorefrontDto.class
 com/example/mystore/repository/ProductRepository.class
 com/example/mystore/dto/ProductRestDto.class
