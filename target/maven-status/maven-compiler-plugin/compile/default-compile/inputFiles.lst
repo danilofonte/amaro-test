@@ -2,6 +2,7 @@
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/MyStoreApplication.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/controller/ProductController.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/config/SwaggerConfig.java
+/home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/controller/IndexController.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/dto/ProductStorefrontDto.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/service/ProductService.java
 /home/danilo/Documents/workspace-sts-3.9.2.RELEASE/MyStore/src/main/java/com/example/mystore/converter/ProductConverter.java

@@ -1,5 +1,6 @@
 package com.example.mystore.service.impl;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,11 @@ public class DefaultProductService implements ProductService {
 	@Override
 	public Page<Product> list(PageRequest pageRequest) {
 		return this.productRepository.findAll(pageRequest);
+	}
+
+	@Override
+	public List<Product> list() {
+		return this.productRepository.findAll();
 	}
 
 }

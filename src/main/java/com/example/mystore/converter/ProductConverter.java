@@ -30,9 +30,10 @@ public class ProductConverter {
 	 */
 	public ProductStorefrontDto convertProductToProductStorefrontDto(final Product product) {
 		ProductStorefrontDto productStorefrontDto = new ProductStorefrontDto();
-		productStorefrontDto.setBaseBaseProduct(product.getP_BASEPRODUCT());
+		productStorefrontDto.setBaseProduct(product.getP_BASEPRODUCT());
 		productStorefrontDto.setDate(product.getP_DATE());
 		productStorefrontDto.setVenue(product.getP_VENUE());
+		productStorefrontDto.setId(product.getId());
 
 		return productStorefrontDto;
 	}
