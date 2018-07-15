@@ -3,6 +3,7 @@ package com.example.mystore.service.impl;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
@@ -18,6 +19,7 @@ public class DefaultProductService implements ProductService {
 	private ProductRepository productRepository;
 
 	@Override
+	@Cacheable("productById")
 	public Optional<Product> findById(Long id) {
 		return Optional.ofNullable(this.productRepository.findOne(id));
 
