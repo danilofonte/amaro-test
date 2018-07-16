@@ -1,4 +1,4 @@
-package com.example.mystore.controller;
+package com.example.mystore.controller.pages;
 
 import java.util.List;
 import java.util.stream.Collectors;

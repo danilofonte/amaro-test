@@ -20,7 +20,7 @@ public class SwaggerConfig {
 	@Bean
 	public Docket api() {
 		return new Docket(DocumentationType.SWAGGER_2).select()
-				.apis(RequestHandlerSelectors.basePackage("com.example.mystore.controller")).paths(PathSelectors.any())
+				.apis(RequestHandlerSelectors.basePackage("com.example.mystore.controller.rest")).paths(PathSelectors.any())
 				.build().apiInfo(apiInfo());
 	}
 

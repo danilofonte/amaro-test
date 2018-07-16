@@ -1,4 +1,4 @@
-package com.example.mystore.controller;
+package com.example.mystore.controller.rest;
 
 import java.util.Optional;
 
