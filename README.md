@@ -15,4 +15,6 @@ https://vast-spire-22963.herokuapp.com/api/product/list
 
 https://vast-spire-22963.herokuapp.com/api/product/by-id/{id}
 
+https://vast-spire-22963.herokuapp.com/api/product/calculate/1/eucd
+
 

@@ -34,5 +34,7 @@ public interface ProductService {
 	List<Product> list();
 	
 	List<ProductRestDto> getThreeFirstProductsBySimilarity(List<ProductRestDto> productRestDtos);
+	
+	Product persist(Product product);
 
 }

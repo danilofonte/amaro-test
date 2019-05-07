@@ -49,14 +49,14 @@ public class ProductConverter {
 	 * @throws IllegalArgumentException
 	 * @throws IllegalAccessException
 	 */
-	public ProductRestDto convertProductRestDtoToProduct(final ProductRestDto productRestDto)
+	public Product convertProductRestDtoToProduct(final ProductRestDto productRestDto)
 			throws IllegalAccessException, IllegalArgumentException, InvocationTargetException {
 		Product product = new Product();
 		product.setName(productRestDto.getName());
 
 		product.setTag(tagConverter.convertTagListToTag(productRestDto.getTags(), product));
 
-		return productRestDto;
+		return product;
 	}
 
 	/**

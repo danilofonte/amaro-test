@@ -50,5 +50,10 @@ public class DefaultProductService implements ProductService {
 		
 		return getFirstThree;
 	}
+	
+	@Override
+	public Product persist(Product product) {
+		return this.productRepository.save(product);
+	}
 
 }
