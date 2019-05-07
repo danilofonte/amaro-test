@@ -8,6 +8,7 @@ import org.springframework.data.domain.PageRequest;
 
 import com.example.mystore.dto.ProductRestDto;
 import com.example.mystore.model.Product;
+import com.example.mystore.model.Tag;
 
 public interface ProductService {
 
@@ -36,5 +37,8 @@ public interface ProductService {
 	List<ProductRestDto> getThreeFirstProductsBySimilarity(List<ProductRestDto> productRestDtos);
 	
 	Product persist(Product product);
+	
+	Tag persist(Tag tag);
+
 
 }

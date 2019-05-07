@@ -26,20 +26,13 @@ public class TagConverter {
 
 			for (Method m : methods) {
 
-				if (m.getName().toLowerCase().contains("setPosicao")
-						&& m.getName().toLowerCase().contains(String.valueOf(tagEnum.posicao))) {
+				if (m.getName().toLowerCase().contains("setposicao")
+						&& m.getName().toLowerCase().replace("setposicao","").equals(String.valueOf(tagEnum.posicao))) {
 					m.invoke(tagVar, 1);
 				}
 
 			}
-
-			for (Method m : methods) {
-
-				if (m.getName().toLowerCase().contains("getPosicao")) {
-					m.invoke(tagVar, 1);
-				}
-
-			}
+			
 
 		}
 
@@ -49,11 +42,11 @@ public class TagConverter {
 
 		for (Method m : methods) {
 
-			if (m.getName().toLowerCase().contains("getPosicao")) {
-				int valor = (int) m.invoke(tagVar, 1);
+			if (m.getName().toLowerCase().contains("getposicao")) {
+				int valor = (int) m.invoke(tagVar);
 
 				if (valor != 1) {
-					pos.add(m.getName().replace("getPosicao", ""));
+					pos.add(m.getName().replace("getposicao", ""));
 				}
 			}
 
@@ -63,7 +56,7 @@ public class TagConverter {
 
 			for (Method m : methods) {
 
-				if (m.getName().toLowerCase().contains(p.toLowerCase()) && m.getName().toLowerCase().contains("set")) {
+				if (m.getName().toLowerCase().replace("setposicao","").contains(p.toLowerCase()) && m.getName().toLowerCase().contains("set")) {
 					m.invoke(tagVar, 0);
 				}
 

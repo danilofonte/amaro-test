@@ -13,7 +13,9 @@ import org.springframework.stereotype.Service;
 
 import com.example.mystore.dto.ProductRestDto;
 import com.example.mystore.model.Product;
+import com.example.mystore.model.Tag;
 import com.example.mystore.repository.ProductRepository;
+import com.example.mystore.repository.TagRepository;
 import com.example.mystore.service.ProductService;
 
 @Service
@@ -21,6 +23,9 @@ public class DefaultProductService implements ProductService {
 
 	@Autowired
 	private ProductRepository productRepository;
+	
+	@Autowired 
+	private TagRepository tagRepository;
 
 	@Override
 	@Cacheable("productById")
@@ -54,6 +59,11 @@ public class DefaultProductService implements ProductService {
 	@Override
 	public Product persist(Product product) {
 		return this.productRepository.save(product);
+	}
+
+	@Override
+	public Tag persist(Tag tag) {
+		return this.tagRepository.save(tag);
 	}
 
 }
