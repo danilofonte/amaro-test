@@ -1,5 +1,7 @@
 package com.example.mystore.service.impl;
 
+import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Optional;
 
@@ -9,6 +11,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.stereotype.Service;
 
+import com.example.mystore.dto.ProductRestDto;
 import com.example.mystore.model.Product;
 import com.example.mystore.repository.ProductRepository;
 import com.example.mystore.service.ProductService;
@@ -34,6 +37,18 @@ public class DefaultProductService implements ProductService {
 	@Override
 	public List<Product> list() {
 		return this.productRepository.findAll();
+	}
+
+	@Override
+	public List<ProductRestDto> getThreeFirstProductsBySimilarity(List<ProductRestDto> productRestDtos) {
+		productRestDtos.sort(Comparator.comparing(ProductRestDto::getSimilarity));
+		
+		List<ProductRestDto> getFirstThree = new ArrayList<>();
+		for (int i = 0; i<=2; i++) {
+			getFirstThree.add(productRestDtos.get(i));
+		}
+		
+		return getFirstThree;
 	}
 
 }

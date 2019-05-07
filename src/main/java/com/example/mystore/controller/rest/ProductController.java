@@ -1,5 +1,8 @@
 package com.example.mystore.controller.rest;
 
+import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -50,7 +53,46 @@ public class ProductController {
 			return ResponseEntity.badRequest().body(response);
 		}
 
-		response.setData(this.productConverter.convertProductToProductRestDto(product.get()));
+		try {
+			response.setData(this.productConverter.convertProductToProductRestDto(product.get()));
+		} catch (IllegalAccessException e) {
+			return ResponseEntity.badRequest().body(response);
+		} catch (IllegalArgumentException e) {
+			return ResponseEntity.badRequest().body(response);
+		} catch (InvocationTargetException e) {
+			return ResponseEntity.badRequest().body(response);
+		}
+		return ResponseEntity.ok(response);
+	}
+
+	/**
+	 * 
+	 * @param id
+	 * @return
+	 */
+	@GetMapping(value = "/calculate/{id}/eucd")
+	public ResponseEntity<Response<List<ProductRestDto>>> calculateEuclideanDistance(@PathVariable("id") Long id) {
+		Response<List<ProductRestDto>> response = new Response<List<ProductRestDto>>();
+		Optional<Product> product = productService.findById(id);
+
+		if (!product.isPresent()) {
+			response.getErrors().add("Product not found by id " + id);
+			return ResponseEntity.badRequest().body(response);
+		}
+
+		List<Product> products = productService.list();
+
+		List<ProductRestDto> productRestDtos = new ArrayList<ProductRestDto>();
+
+		products.stream().filter(p -> p.getTag() != null && p.getId()!=product.get().getId()).forEach(p -> {
+			try {
+				productRestDtos.add(productConverter.convertProductToProductRestDtoWithSimilarity(product.get(), p));
+			} catch (IllegalAccessException | IllegalArgumentException | InvocationTargetException e) {
+				e.printStackTrace();
+			}
+		});
+
+		response.setData(productService.getThreeFirstProductsBySimilarity(productRestDtos));
 		return ResponseEntity.ok(response);
 	}
 
@@ -69,7 +111,18 @@ public class ProductController {
 
 		PageRequest pageRequest = new PageRequest(pag, this.qtyPerPage, Direction.valueOf(dir), ord);
 		Page<Product> products = this.productService.list(pageRequest);
-		Page<ProductRestDto> productsDto = products.map(p -> this.productConverter.convertProductToProductRestDto(p));
+		Page<ProductRestDto> productsDto = products.map(p -> {
+			try {
+				return this.productConverter.convertProductToProductRestDto(p);
+			} catch (IllegalAccessException e) {
+				e.printStackTrace();
+			} catch (IllegalArgumentException e) {
+				e.printStackTrace();
+			} catch (InvocationTargetException e) {
+				e.printStackTrace();
+			}
+			return null;
+		});
 
 		response.setData(productsDto);
 		return ResponseEntity.ok(response);

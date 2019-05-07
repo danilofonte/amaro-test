@@ -169,7 +169,7 @@
 <div class="container" style="height: 100vh;">
     <div class="row">
         <div class="col-md-12">
-            <h1 th:text="${product.venue}">Product Name</h1>
+            <h1 th:text="${product.name}">Product Name</h1>
         </div>
     </div>
     <div class="row course-listing">
@@ -181,20 +181,10 @@
            </div>
             <div class="row course-listing-extra-info col-xs-12">
                 <div class="col-xs-8">                    
-                    <div class="small course-author-name" th:text="${product.venue}">
-                        Venue
+                    <div class="small course-author-name" th:text="${product.name}">
+                        Name
                     </div>
-                </div>
-                <div class="col-xs-8">                    
-                    <div class="small course-author-name" th:text="${product.baseProduct}">
-                        Base Product
-                    </div>
-                </div>
-                <div class="col-xs-8">                    
-                    <div class="small course-author-name" th:text="${#dates.format(product.date, 'dd-MMM-yyyy')}">
-                        Date
-                    </div>
-                </div>
+                </div>                
             </div>            
         </div>      
     </div>

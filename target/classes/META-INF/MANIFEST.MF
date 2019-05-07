@@ -3,7 +3,7 @@ Implementation-Title: MyStore
 Implementation-Version: 0.0.1-SNAPSHOT
 Built-By: danilo
 Implementation-Vendor-Id: com.example.mystore
-Build-Jdk: 1.8.0_171
+Build-Jdk: 1.8.0_211
 Implementation-URL: http://projects.spring.io/spring-boot/MyStore/
 Created-By: Maven Integration for Eclipse
 Implementation-Vendor: Pivotal Software, Inc.

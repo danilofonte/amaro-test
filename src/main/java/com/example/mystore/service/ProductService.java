@@ -6,6 +6,7 @@ import java.util.Optional;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 
+import com.example.mystore.dto.ProductRestDto;
 import com.example.mystore.model.Product;
 
 public interface ProductService {
@@ -31,5 +32,7 @@ public interface ProductService {
 	 * @return
 	 */
 	List<Product> list();
+	
+	List<ProductRestDto> getThreeFirstProductsBySimilarity(List<ProductRestDto> productRestDtos);
 
 }
